@@ -48,12 +48,10 @@ def main():
             monthly_attendance(emp_id,month)
  
         elif choice == '5':
-            # emp_id=int(input("Enter Employee Id:"))
-            # month=input("Enter the month (MM-YY) for salary calculation:")
-            # calculate_salary(emp_id,month)
-            calculate_salary()
-
- 
+            emp_id=int(input("Enter Employee Id:"))
+            month=input("Enter the month (MM-YY) for salary calculation:")
+            calculate_salary(emp_id, month)
+           
         elif choice == '6':
             employees = view_all()
             for emp in employees:
