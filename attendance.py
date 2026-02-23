@@ -75,12 +75,9 @@ work_hours = {
         "05-01-2026": 8
     }
 }
- 
 def mark_attendance(emp_id, date, status):
-    # Check if employee exists without flag variable
     for emp in employee:
         if emp['id'] == emp_id:
-            # Employee found
             if emp_id not in attendance:
                 attendance[emp_id] = {}
            
@@ -92,14 +89,10 @@ def mark_attendance(emp_id, date, status):
             print("Attendance Marked")
             return
    
-    # Employee not found
     print("Employee ID not found in system")
- 
 def record_work_hours(emp_id, date, hours):
-    # Check if employee exists without flag variable
     for emp in employee:
         if emp['id'] == emp_id:
-            # Employee found
             if hours <= 0:
                 print("Invalid working hours")
                 return
@@ -115,14 +108,10 @@ def record_work_hours(emp_id, date, hours):
             print("Working hours recorded successfully")
             return
    
-    # Employee not found
     print("Employee ID not found in system")
- 
 def monthly_attendance(emp_id, month):
-    # Check if employee exists without flag variable
     for emp in employee:
         if emp['id'] == emp_id:
-            # Employee found
             if emp_id not in attendance:
                 print("No attendance found for this employee")
                 return
@@ -140,5 +129,4 @@ def monthly_attendance(emp_id, month):
                 print(f"No attendance records found for {month}")
             return
    
-    # Employee not found
     print("Employee ID not found in system")
