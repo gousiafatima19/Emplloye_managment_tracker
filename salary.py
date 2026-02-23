@@ -27,11 +27,16 @@ def calculate_salary(emp_id, month):
                             total_hours += work_hours[emp_id][date]
  
     bonus = 0
+    
+
     if days_present == 5:
         bonus = 2000
- 
-    net_salary = base_salary + bonus
- 
+    elif days_present >= 3:
+        deduction = (5 - days_present) * 200  # Deduct $200 for each day less than 5
+        base_salary -= deduction
+    net_salary = base_salary + bonus - deduction
+
+
     print("\n=== PAYROLL SUMMARY ===")
     print("Employee Name:", name)
     print("Employee ID:", emp_id)
